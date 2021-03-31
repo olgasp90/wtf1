@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <img src="{{pet.pet_image()}}">
+        <p> Pet name is {{pet.name}} </p>
+        <p>This pet is a {{pet.species}} and is {{pet.age}} years old</p>
+        <p>{{pet.notes}}</p>
+        <p>{{ pet.name}} {% if pet.available %} <b> Is available now!</b> {% endif %}</p>
+    </div>
+
+    <b><a href="/"> See all pets</a></b>
+
+{% endblock %}
